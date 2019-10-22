@@ -64,8 +64,9 @@ class DeviceInfo {
     return <String, String>{
       'os_name': data.systemName,
       'os_version': data.systemVersion,
-      'device_brand': null,
       'device_manufacturer': 'Apple',
+      'device_brand': '---', // hide the device name as it often contains the user's full name on iOS
+      'device_model': data.model,
       'device_id': data.identifierForVendor,
       'idfv': data.identifierForVendor,
       'platform': 'iOS'
